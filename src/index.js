@@ -28,6 +28,6 @@ mongoose.connect(process.env.DB_URL, {
 
 app.use(require('./routes'));
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Serve on, in port ${port}`);
 });
